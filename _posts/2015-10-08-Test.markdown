@@ -1,15 +1,21 @@
 ---
 layout: post
-title:  "Pre-course Summary | T minus 2 days!"
-date:   2015-06-06 08:46:34
-categories: pre-course
-image: http://www.natalie-akam.com/images/precourse_badges.JPG
+title:  "Pre-course: Week 1"
+date:   2015-08-19 21:22:35
 ---
 
-Wow. That 4 weeks went really quickly! It scares me to think that we're a quarter of the way through the journey in effect. Other statistics that scare me are: in 2 weeks I'll be mentoring a newbie, in 6 weeks I'll be a 'senior maker' and in 11 weeks I'll be graduating (touch wood). And we haven't even had our first day yet!
+The Pre-course for the September cohort started on Monday (4 August). Everyone either joined via a conference call or came along to Makers Academy. We had a presentation on what to expect from the course and how to do the Pre-course work. Everyone was really friendly and we had a good laugh during the introduction stand-ups – we had 10 seconds to introduce ourselves.
 
-The last four weeks have been spent learning how to effectively use Github & Bash and trying to cram as much Ruby knowledge into my head as possible via tutorials, documentation and a rather fun site called <a href="http://www.codewars.com/about">Codewars</a>. The work really ramped up in the 3rd week and I'm still desperately trying to finish bits before we start on Monday. Admittedly half way through pre-course week 3 wasn't exactly the best time to go off on holiday to Barcelona...
+So what am I going to do in the next 4 weeks? I will be completing a challenge every weekend so I need to say ‘bye bye’ to my social life.
 
-In addition to the massive pile of pre-course work I've also been working on this blog quite a bit, which may not be apparent from the number of posts (or lack thereof). I decided to be adventurous and set it up using Jekyll and Github rather than a pre-made template (since I'm a developer, not a blogger, right?). Thanks to this wise decision I've had to solve a number of issues including getting the preview server to work (finally worked out you have to change the config file). I've also recently discovered that the css stylesheets don't work exactly how I thought they would. I think you have to create a stylesheet separate from the main one if you want to add new classes in... So depending on when you view my blog it may look like the most beautiful thing you've ever seen, a polished turd still, or something in between. 
+*	Week 1: It’s all about command line. I have managed to submit my weekend challenged this week so phew, getting there!
 
-Nat x
+*	Week 2: Hello GITHUB! I have already covered quite a bit of the material but oh my… still a lot to learn.
+
+*	Week 3: Ruby – learn the basics
+
+*   Week 4: Ruby – advanced techniques and Codewars – Let the Game BEGIN! FIGHT!
+
+That’s in a nutshell how the Pre-course is structured. I am still figuring out how to create posts so bear with me for a moment. I will try to post every week so watch this space!
+
+Zhivko
