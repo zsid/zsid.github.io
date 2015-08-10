@@ -8,7 +8,7 @@ The Pre-course for the September cohort started on Monday (4 August). Everyone e
 
 So what am I going to do in the next 4 weeks? I will be completing a challenge every weekend so I need to say ‘bye bye’ to my social life.
 
-*	Week 1: It’s all about command line. I have managed to submit my weekend challenged this week so phew, getting there!
+*	Week 1: It’s all about command line. I have managed to submit my weekend challenge this week so phew, getting there!
 
 *	Week 2: Hello GITHUB! I have already covered quite a bit of the material but oh my… still a lot to learn.
 

@@ -26,7 +26,7 @@ It is Monday evening now and we were asked to reflect on what we learnt last wee
 -------------------------------
 
 * I hope to start the Ruby early in the week as it will be one of our main languages. I have done some Ruby before so hopefully it should be a little bit easier.
-* Understand how to blog using github.io as it will help me get more practice on Github.
+* Understand how to blog using github.io 
 
 
 Zhivko
