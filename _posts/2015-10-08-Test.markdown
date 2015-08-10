@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Pre-course: Week 1"
-date:   2015-08-19 21:22:35
+date:   2015-08-09 21:22:35
 ---
 
 The Pre-course for the September cohort started on Monday (4 August). Everyone either joined via a conference call or came along to Makers Academy. We had a presentation on what to expect from the course and how to do the Pre-course work. Everyone was really friendly and we had a good laugh during the introduction stand-ups – we had 10 seconds to introduce ourselves.
