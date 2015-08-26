@@ -34,3 +34,6 @@ I have summarised my highs and lows last week.
 
 * I liked the Octocat challenge, in particular, asking to explain what a branch, clone and "upstream" remote mean.
 * Maybe being in a pair with someone, and each one of us taking turns to explain the different Git commands. I think that will be more interactive and helpful as I might have missed something about Git that someone else has picked up.
+
+
+__Zhivko__

@@ -18,4 +18,4 @@ So what am I going to do in the next 4 weeks? I will be completing a challenge e
 
 That’s in a nutshell how the Pre-course is structured. I am still figuring out how to create posts so bear with me for a moment. I will try to post every week so watch this space!
 
-Zhivko
+__Zhivko__
