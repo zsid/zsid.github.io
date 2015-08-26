@@ -12,4 +12,4 @@ You may ask: What is Makers Academy?
 
 Have a look at http://www.makersacademy.com/
 
-Prior to joining Makers Academy, I worked in Human Resources. An interesting fact about me is that I play bridge. Bridge is known in the UK as ‘Granny’s game’ which was quite a surprise for me as I had participated in several European & World Championship (Under the age of 25).
+Prior to joining Makers Academy, I worked in Human Resources. An interesting fact about me is that I play bridge. Bridge is known in the UK as ‘Granny’s game’ which was quite a surprise for me as I had participated in several European & World Championship.
