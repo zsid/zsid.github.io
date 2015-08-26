@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Three down and one to go"
+date: 2015-08-23 22:15:22
+---
+
+Time...time..time... what's happening? The time has flown over again and here I am at the end of week 3. 
+
+This week was focused on Ruby and getting the basis right! The weekend challenge was to register for Codewars and reach 40-50 point mark. I managed to get to the 40 points but it was tough. I had to do a lot of 'googling' and Google has become my best friend.
+
+Summary of the week is below.
+
+####Most Important Things I Learned:
+-------------------------------
+
+* If I have spent more than 30 minutes on a Kata (codewars), I should see the solution and move one as I am wasting time.
+* Got a better understanding of yield.
+
+####Things I Struggled With The Most:
+-------------------------------
+
+* I need to further address procs and lambdas and figure out best practices on when to use them.
+* Selecting the correct method seems to be a problem. I need to use Ruby Docs more often as a reference point.
+
+
+####Changes I Plan to Make Next Week:
+-------------------------------
+
+* I will spend 30min most on any problem I am dealing with and see the solution.
+* I will spend more time on procs & lambdas and redo some of the challenges.

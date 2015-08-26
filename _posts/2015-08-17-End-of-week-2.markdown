@@ -1,0 +1,36 @@
+---
+layout:		post
+title: 		"Reflection: Precourse Week 2"
+date:		 2015-08-17 21:22:33
+---
+
+The second week of the precourse has passed really quickly. The second week mainly focused on GitHub and our challenge was to create repositories, push, pull and many more Git commands as going forward GitHub will be sort of my "Facebook" page if you may in the IT world.
+
+I have summarised my highs and lows last week.
+
+
+####Most Important Things I Learned:
+-------------------------------
+
+* GitHub is starting to feel more familiar.
+* Taking time to explain a concept to someone else will really help to see gaps in your explanation.
+
+####Things I Struggled With The Most:
+-------------------------------
+
+* It took me some time to understand what a remote branch and remote repository are and why they are used.
+* "Fast-track" merges weren't as simple as I though they would be. It took me some to understand the general idea but I think I will need more practice switching between branches and merging them.
+
+
+####Changes I Plan to Make Next Week:
+-------------------------------
+
+* I hope to finisht most of ruby-kickstart chapters 1 & 2 as well as Chris Pine's book. Watch this space.
+* If I struggle more than 1 hour with an exercise, I will look at the solution, do it and then redo it the next day, hopefully coming up with another syntax or at least knowing what and why I use the syntax in question.
+
+
+####Other Experiences or General Feedback This Week:
+-------------------------------
+
+* I liked the Octocat challenge, in particular, asking to explain what a branch, clone and "upstream" remote mean.
+* Maybe being in a pair with someone, and each one of us taking turns to explain the different Git commands. I think that will be more interactive and helpful as I might have missed something about Git that someone else has picked up.

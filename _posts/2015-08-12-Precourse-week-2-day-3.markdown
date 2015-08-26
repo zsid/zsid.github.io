@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Is it really a progress?"
-date: 2015-08-12 22:10:35
-----
+title:  "Is it really a progress"
+date:   2015-08-12 21:22:35
+---
 
 Hi Everyone,
 
