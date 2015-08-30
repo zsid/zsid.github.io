@@ -4,11 +4,11 @@ title: "The End of the Precourse"
 date: 2015-08-30 09:30:15
 ---
 
-The Precourse is almost over. The course usually starts on a Monday but as tomorrow is a Bank holiday , we will start on Tuesday.To be fair, I can't wait for the course to start and this Bank holiday Monday is really a pain. But hey any other Bank holidays are welcome apart from this one.
+The Precourse is almost over. The course usually starts on a Monday but as tomorrow is a Bank holiday , we will start on Tuesday.To be fair, I can't wait for the course to start and this Bank holiday Monday is really a pain. But hey any other Bank holidays are welcomed apart from this one.
 
-As you may recall one of the challenges last week was to join codewars and reach 40-50 points. For anyone, who has reached above 125 points before the start of the course, will receive a sticker while at MA.	As you can imagine that was one of my goals this week and hey I am getting that sticker as I have reached 143 points! YAY!
+As you may recall one of the challenges last week was to join codewars and reach 40-50 points. For anyone, who has reached above 125 points before the first dat at MA, will receive a reward - a sticker.	As you can imagine this was one of my goals this week and I have earnedthe sticker as I have reached 143 points!
 
-As it is the end of week 4, I have provided a summary below.
+As usual, I have provided a summary below at the end of the week.
 
 ####Most Important Things I Learned:
 -------------------------------
