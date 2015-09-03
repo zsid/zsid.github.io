@@ -1,0 +1,28 @@
+---
+layout: post
+title: Week 1, Day 2
+time: 2015-09-02 22:15:22
+---
+
+The real work has begun. Today I got to the office around 8, had breakfast and we started with a brief talk at 9 o'clock. The coach discussed the benefits of Pair Programming and it's on its way to become an industry standard. Makers Academy advocates Pair Programming and I will be pairing with a different person, every day for the duration of the course.
+
+Briefly a day at MA will look like this:
+
+* 9:00 - Standups, where we will discuss what issues we have encountered and our coach will go through every one of them and explain how to approach them.
+* Coding Coding Coding.
+* 12:00-13:00 - I tend to have lunch break around that time as I am usually starving.
+* 14:00 - There is meditation every day at 14:00 and yoga on Monday and Thursday at 17:00. I plan to go to yoga on Mondays and Thursdays and meditation for the rest of the week.
+* 14:30 - Second Standup, same as the 9:00 o'clock one.
+* Coding coding coding and go home once I have run out of energy.
+
+Our task this week was to go back in time and create the Boris Bikes system for Transport for London. So they want us to build a program that will run all docking stations, simulate all the bikes, and emulate the infrastructure. Simple, right?
+
+So the morning went by going through the challenges and learning more about Rspec. I had a lunch break with my pair partner Kyle and we went to Spitalfields Market for a walk and get some fresh ear. I also went to meditation at 14:00 and then we had our Standup at 14:30.
+
+For the rest of the day, me and my pair partner managed to complete half of the challenges and we were happy with our progress as most of the things were making sense.
+
+Tomorrow, I will have a new pair partner and depending on where we both are with the project, we will try to finish it.
+
+That's all for today. Good night.
+
+__Zhivko__
