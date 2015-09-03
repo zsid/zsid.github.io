@@ -21,4 +21,5 @@ So yes, that's in a nutshell and I can't wait for tomorrow to come.
 
 Good night!
 
-__Zhivko__ 
+__Zhivko__
+>>>>>>> 5eb392de2d10cc643c5a5ffe53b1fc3eb3825ad1
