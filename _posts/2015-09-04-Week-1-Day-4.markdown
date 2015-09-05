@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Week 1, Day 4"
+date: 2015-09-04 21:45:32
+---
+
+It is Friday now. At my previous job everyone welcomed Friday as it meant it was the end of the week and we could finally chill out at home or enjoy a night out.
+
+This is not the case at MA. Every Friday, we receive a weekend challenge, which it takes on average 10-12 hours to solve BUT if it may take slightly longer if you get stuck (surprise suprise).
+In the morning, my pair partner and I had some progress on Boris Bikes but we were stuck at some point, figuring out how to release only working bikes from our dockstation. At the end, we came up with a solution:
+
+``` bikes.delete(@bikes.select { |bike| bike.working? }.pop) ```
+Beautiful, right?
+
+Then we had lunch break, coding, meditation at 14:30 and then our standup. In our standup today we've reflected on what we have learnt through the week and focused on how to use doubles when testing our code. Also, on our to do list for next week is to read about London and Chicago schools of thought on Test Driven Development (TDD). I will post a block on this later and I may also include brief explanations on other terminologies that we have used throughout the week.
+
+We received our weekend challenge at 17:00 and it was to build an Airport. I will recommend to any future passengers who arrive or depart from my airport to buy a travel insurance.
+
+That's the summary for today.
+
+Good night
+
+__Zhivko__

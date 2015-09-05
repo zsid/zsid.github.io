@@ -6,7 +6,7 @@ time: 2015-09-03 21:05:32
 
 Another day, another evening. We started the morning as usual having a Standup at 9:00. We discussed how we found the Boris Bikes exercise yesterday and I was happy with the progress I had made so far. We were given a task for the morning to write a post on TDD and you can have a look at [my pair partner's blog](http://harrietc52.github.io/2015/09/03/test-driven-development/) to see what we have written.
 
-The lunch break came quickly and my pair went to a lunch time talk by Andy Geers from [hubbub.co.uk](https://beta.hubbub.co.uk/). The day flew by afterwards - we went to meditation, had our standup, coding, yoga, coding, coding, coding and I am in bed now writting this post.
+The lunch break came quickly and my pair went to a lunch time talk by Andy Geers from [hubbub.co.uk](https://beta.hubbub.co.uk/). The day flew by afterwards - we went to meditation, had our standup, coding, yoga, coding, coding, coding and I am in bed now writing this post.
 
 My lessons from today are:
 
