@@ -1,0 +1,32 @@
+---
+layout: post
+title: "Week 1, Day 5"
+date: 2015-09-05 20:30:22
+---
+
+Today has passed really quickly. I have finished my weekend challenge and I am really pleased with myself. Still, there are areas in my Rspec tests which I really need to improve: for example, creating doubles, mocking and avoid repeating myself. I will look tomorrow what's the difference between the London and Chicago styles of testing and maybe write a short post on this (if I have time). I also want to do some additional reading and complete the Boris Bikes challenge as I wasn't able to do it earlier in the week. I will also redo the Airport challenge from scratch if I have time. Hmm busy Sunday...
+
+I have also completed my learning plan for the first week of the course. Please have a look below.
+
+####Most Important Things I Learned:
+-------------------------------
+
+* A better understanding of TDD, Feature Tests, Unit tests, Domain Model and how to break down a User story.
+* I am starting to feel a little more comfortable with writing Rspec tests.
+
+####Things I Struggled With The Most:
+-------------------------------
+
+* I am repeating myself a lot in Rspec tests and I am unsure how to improve it.
+* Not enough time to cover all of the material.
+
+
+####Changes I Plan to Make Next Week:
+-------------------------------
+
+* Try to have shorter lunch breaks as the meditation and standups take a lot of my time.
+* I will try to complete all of the next week's challenge.
+
+See you later.
+
+__Zhivko__
