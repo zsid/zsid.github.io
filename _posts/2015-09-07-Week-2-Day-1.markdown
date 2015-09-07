@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Week 2, Day 1"
+date: 2015-09-07 21:02:22
+---
+
+Monday is the day when our weekend challenge is reviewed by the senior students and our coach will send us comments later this week. Overall, the senior was happy with my code and gave me tips on double and so I am looking forward to the coach's review.
+
+Monday is also the day when we receive our assignment for the week ahead. We are doing the Battleships game this week. If you haven't played Battleships, Battleships (or Battleship) is a game where each player has a board upon which they can place a number of ships. The boards are 10x10 two dimensional grid. After each player has placed their ships on their own board they take turns to shoot on the opponent's board. In each round, each player takes a turn to announce a target square in the opponent's grid which is to be shot at. The opponent announces whether or not the square is occupied by a ship, and if it is a hit, they mark this on their own primary grid. The attacking player notes the hit or miss on their own tracking grid, in order to build up a picture of the opponent's fleet.
+
+Sounds simple, right? Well, today my pair was stuck on how to build the grid, let alone the rest. So there is a lot of work my way coming tomorrow and hopefully I will make some progress.
+
+See you later and good night.
+
+__Zhivko__
