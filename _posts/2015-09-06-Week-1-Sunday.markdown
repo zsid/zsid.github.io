@@ -9,14 +9,14 @@ any number of planes can now land and take off.
 
 The code of the day is (my airport keeps track of planes in an array):
 
-``` def plane_took_off(*plane)
+    def plane_took_off(*plane)
         plane.each { |plane| plane.take_off }
         planes.delete_if { |plane| plane.flying }
-    end```
+    end
 
 It took ages to figure it out how to test it. Finally:
 
-```it two planes can take off at the same time' do
+    it two planes can take off at the same time' do
             plane = double :plane
             plane2 = double :plane2
             allow(subject).to receive(:weather_stormy?) {false}
@@ -30,7 +30,7 @@ It took ages to figure it out how to test it. Finally:
             subject.permission_to_take_off(plane, plane2)
             expect(subject.planes).to be_empty
           end
-end```
+    end
 
 There is definitely a way to make it shorter but I haven't figred it out yet. This is all for today.
 
