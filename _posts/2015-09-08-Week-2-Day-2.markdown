@@ -3,9 +3,9 @@ layout: post
 title: "Weel 2, Day 2"
 date: 2015-09-08 11:01:32
 ---
-Good morning or evening everyone,
+Good morning everyone,
 
-In our standups today, we discussed our yesterday's ups and downs and then given a task to research the SOLID principles, in particular dependency inversion, and write a post. You can ind below the work [Mo](http://moesadoon.ghost.io/) and I have done.
+In our standups today, we have discussed yesterday's ups and downs and then received a task to research the SOLID principles, in particular dependency inversion, and write a post. You can ind below the work [Mo](http://moesadoon.ghost.io/) and I have done.
 
 ####SOLID
 ---------------------------
