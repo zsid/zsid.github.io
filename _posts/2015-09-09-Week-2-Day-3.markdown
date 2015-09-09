@@ -1,0 +1,101 @@
+---
+layout: post
+title: "Week 2, Day 3"
+time: 2015-09-09 10:16:45
+---
+
+Wednesday has started as usual - I got up around 6:45, had a shower and headed to MA, arriving at 8:10. I did some light reading about the Single Responsibility principle and headed down for our standup at 9:00. Our research project today is to research Inheritance vs Composition and my partner Sarah will post our research piece tomorrow.
+
+I have also received my feedback on the weekend challenge (building an Airport). I had two classes and 2 modules and my modules were doing the heavy lifting. Alas, looks like I overcomplicated everything rather than simplifying it. For example:
+
+    module AirController
+
+      WEATHER = [:sunny, :stormy]
+
+      def permission_to_land(*plane)
+        fail "The Airport is full" if plane_hangar_full?
+        fail "Bad weather conditions" if weather_stormy?
+        plane_landed(*plane)
+      end
+
+      def permission_to_take_off(*plane)
+        fail "No planes at the airport" if plane_hangar_empty?
+        fail "Bad weather conditions" if weather_stormy?
+        plane_took_off(*plane)
+      end
+
+      private
+
+      def plane_landed(*plane)
+        x = plane.each { |plane| plane.landing }
+        planes << x.flatten
+        planes.flatten!
+      end
+
+      def plane_took_off(*plane)
+        plane.each { |plane| plane.take_off }
+        planes.delete_if { |plane| plane.flying }
+      end
+
+      def weather_forecast
+        WEATHER.sample
+      end
+
+      def weather_stormy?
+        weather_forecast == :stormy
+      end
+
+    end
+
+As you can see my AirController module was looking after the planes states, creating an unwanted dependency.
+
+My other module took over the Airport's functions
+
+    module PlaneHangar
+
+      attr_writer :capacity
+
+      DEFAULT_CAPACITY = 6
+
+      def planes
+        @planes ||= []
+      end
+
+      def capacity
+        @capacity ||= DEFAULT_CAPACITY
+      end
+
+      private
+
+      def plane_hangar_full?
+        planes.length >= capacity
+      end
+
+      def plane_hangar_empty?
+        planes.empty?
+      end
+
+    end
+
+...making my Airport a dependant.
+
+    require_relative 'aircontroller'
+    require_relative 'planehangar'
+    require_relative 'plane'
+
+    class Airport
+      include AirController
+      include PlaneHangar
+
+      def initialize(capacity = PlaneHangar::DEFAULT_CAPACITY)
+        self.capacity = capacity
+        self.planes
+      end
+
+    end
+
+Overall, I need to stop and think about the classes' responsibilities (SRP - Single Responsibility Principle) and take it from there, making my code TRUE (Transparent, Resonable, Usable, Exemplary).
+
+Good night.
+
+__Zhivko__
