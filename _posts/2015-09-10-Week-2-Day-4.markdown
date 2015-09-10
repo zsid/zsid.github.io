@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Week 2, Day 4"
+time: 2015-09-10 21:05:22
+---
+The morning started with our usual stand up at 9:00 and our research project today is on duck typing. My pair partner and I have decided to spend max 45 minutes, researching and doing a blog post. Everything went as planned and you could read our post on my partner's [blog](http://usmanj.github.io/duck-typing/).
+
+I think we have made good progress on the battleships today. We have made our place method smarter and it now knows to raise a few errors. We are still working on placing a ship in the different directions, only South is working so far and East is almost done :)
+
+
+    def place(ship)
+      fail "Ship already in this location!" if ship_already_in_location?(ship.coordinates)
+      fail "Wrong coordinates" if wrong_coordinates?(ship.coordinates)
+      placing_ship(ship)
+    end
+
+    def placing_ship(ship)
+      if ship.direction == :East
+        placing_ship_east(ship)
+      elsif ship.direction == :North
+        true
+      elsif ship.direction == :South
+        place_ship_south(ship)
+      else
+        true
+      end
+    end
+
+As you can see the afternoon passed quickly and as it is Thursday there's a yoga class... but outside as the weather was lovely! GO YOGA! I will add a picture tomorrow.
+
+__Zhivko__
