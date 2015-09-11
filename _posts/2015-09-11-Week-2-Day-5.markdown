@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Week 2, Day 5"
+time: 2015-09-11 21:45:22
+---
+Happy Friday everyone! If you have a job, Friday usually means the end of the week and you can do whatever you want during the weekend. Not at Makers. On Fridays, we receive our weekend challenges and believe me the difficulty level of the challenges is raising.
+
+This weekend, we have to write our own 'inject' method and build a Takeaway program which will send a text message once you've placed an order - easy, right?
+
+We also have two research projects, the first one is to talk about ruby gems and the second one is about blocks, procs and lambdas. I will write a blog post for them maybe tomorrow or on Sunday.
+
+I have also provided a brief summary of the week below.
+
+
+####Most Important Things I Learned:
+-------------------------------
+
+* It is not about completing the week's challenge but how much you have learnt along the way.
+* Seniors are struggling too and it will be even more challenging when we progress further. The most important thing is to take my time and understand every line of code which my partner and I write.
+
+####Things I Struggled With The Most:
+-------------------------------
+
+* I have found myself with not enough time to complete the research projects, complete the tasks for the week and do some additional reading.
+* Retaining all the knowledge from reading, standups and videos.
+
+
+Changes I Plan to Make Next Week:
+-------------------------------
+
+* Spend less time on the research project in the mornings.
+* Try to finish at least the first 2 Chapters of Refactoring Ruby.
+
+
+Other Experiences or General Feedback This Week:
+-------------------------------
+
+* I think releasing the weekend challenge earlier on Friday and having some solo team on Friday to catch up with reading of the week so far were great ideas.
+* A list of books to read while at the course and after the course will be helpful for me.
+
+Good night.
+
+
+__Zhivko__

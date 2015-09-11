@@ -4,7 +4,7 @@ title: "Week 2, Day 3"
 time: 2015-09-09 10:16:45
 ---
 
-Wednesday has started as usual - I got up around 6:45, had a shower and headed to MA, arriving at 8:10. I did some light reading about the Single Responsibility principle and headed down for our standup at 9:00. Our research project today is to research Inheritance vs Composition and my partner Sarah will post our research piece tomorrow.
+Wednesday has started as usual - I got up around 6:45, had a shower and headed to MA, arriving at 8:10. I did some light reading about the Single Responsibility principle and headed down for our standup at 9:00. Our research project today is to research Inheritance vs Composition.
 
 I have also received my feedback on the weekend challenge (building an Airport). I had two classes and 2 modules and my modules were doing the heavy lifting. Alas, looks like I overcomplicated everything rather than simplifying it. For example:
 
