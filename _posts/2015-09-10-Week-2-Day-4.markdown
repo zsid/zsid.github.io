@@ -26,6 +26,9 @@ I think we have made good progress on the battleships today. We have made our pl
       end
     end
 
-As you can see the afternoon passed quickly and as it is Thursday there's a yoga class... but outside as the weather was lovely! GO YOGA! I will add a picture tomorrow.
+As you can see the afternoon passed quickly and as it is Thursday there's a yoga class... but outside as the weather was lovely! GO YOGA! I will add a picture tomorrow. And here it is :)
+
+![Yoga]({{ http://zsid.github.io./2015/09/10/Week-2-Day-4.html }}/images/yoga.jpg)
+
 
 __Zhivko__
