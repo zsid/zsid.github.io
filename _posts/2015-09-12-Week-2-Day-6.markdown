@@ -24,7 +24,7 @@ A block is provided here to execute an instruction for each element in the colle
 
 We can also use one or more variables in our block. Those variables are local to the block alone, so they will be destroyed once the block is executed. Thus, if we had two blocks, we could use the variable 'greeting' in both of them, and one wouldn’t affect the other.
 
-Why do some methods accept a block and others don't? It's because methods that accept blocks have a way of transferring control from the calling method to the block and back again. We can build this into the methods we define by using the yield keyword.
+So, why do some methods accept a block and others don't? It's because methods that accept blocks have a way of transferring control from the calling method to the block and back again. We can build this into the methods we define by using the yield keyword. Please have a look at the example below:
 
     def yield_test
       puts "We're in the method!"
