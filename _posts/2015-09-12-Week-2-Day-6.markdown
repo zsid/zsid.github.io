@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Week 2, Day 6"
+title: "Week 2, Day 6, Block-Proc-Lambda"
 date: 2015-09-12 07:27:23
 ---
 Good morning everyone,
