@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Week 3, Day 1"
+date: 2015-09-14 21:35:32
+---
+Hello everyone,
+
+You should know the drill so far. Mondays is when our code is reviewed by the Seniors and we share our experience during the weekend. Everyone was pretty grim and exhausted after the weekend - we had two challenges: writting our own inject method and building a Takeaway restaurant which can send text confirmation to our phones. Not to mention the two reserach assignments that we had. So yes, being busy.
+
+Today is also a big day. The Precourse for the October cohort is starting today so I am now a mentor. Can you believe it? I am a mentor just after 2 weeks and after 4 more, I will be a Senior?! LOL - time flyes and no pressure there. So we had the precourse presentation at 18:15 until 19:00ish and went to the pub with the October cohort. The night has gone really quickly and is bed time now.
+
+I will just post a picture from today which is a nice summary of my day of learning HTML, Sinatra and CSS.
+
+![Kitten]({{ http://zsid.github.io./2015/09/14/Week-3-Day-1.html }}/images/kitten.jpg)
+
+
+__Zhivko__
