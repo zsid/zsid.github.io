@@ -5,7 +5,7 @@ date: 2015-09-14 21:35:32
 ---
 Hello everyone,
 
-You should know the drill so far. Mondays is when our code is reviewed by the Seniors and we share our experience of the weekend. Everyone was pretty exhausted after the weekend - we had two challenges: writting our own inject method and building a Takeaway restaurant which can send text confirmation to our phones. Not to mention the two reserach assignments that we had. So yes, being busy.
+You should know the drill so far. Mondays is when our code is reviewed by the Seniors and we share our experience of the weekend. Everyone was pretty exhausted after the weekend - we had two challenges: writing our own inject method and building a Takeaway restaurant which can send text confirmation to our phones. Not to mention the two research assignments that we had. So yes, being busy.
 
 Today is also a big day. The Precourse start date of the October cohort is today so I am now a mentor. I can't believe it...I am a mentor just after 2 weeks and after 4 more, I will be a Senior... LOL - the time is flying and no pressure there. So we had the precourse presentation at 18:15 until 19:00ish and went to the pub with the October cohort. The day has gone really quickly and it is bed time now.
 

@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Week 3, Day 2"
+date: 2015-09-15 19:20:21
+---
+Good evening everyone.
+
+The morning started with the usual standup at 9:00. Everyone was really happy with the material so far, especially the introductory exercises for Sinatra. No major blockers from yesterday and we quickly rapped up.
+
+Our main focus today was Sinatra syntax and how to create a very very very basic website. Our assignment for the week is to put the Battleship game from last week on the web. Turns out it is not so simple. A really basic Sinatra syntax below, learning about '.erb' files and their purpose is to render the code into '.html' files. As obvious as it sounds, things can get really messy if you miss a space here or there, using HTML. So watch that SPACE!
+
+    class BattleshipsWeb < Sinatra::Base
+      set :views, proc { File.join(root, '..', '/views') }
+      get '/' do
+        erb :index
+      end
+
+    end
+
+
+    # erb file called index.erb which will display the content below
+    # on the website, creating a hyperlink called 'New Game'
+    <div>
+      <a href='/new_game'>New Game</a>
+    </div>
+
+  The next question is, wait, we are doing TDD right? How do we test it? And why did we write the code first? Well spotted! We are testing friends are Rspec and Capybara so more syntax! We will test the above code like this:
+
+      feature 'Starting a new game' do
+        scenario 'I am asked to enter my name' do
+          visit '/'
+          click_link 'New Game'
+          expect(page).to have_content "What's your name?"
+      end
+
+The 'feature' key word is similar to the 'describe' one in Rspec and the 'scenario' keyword is for the examples i.e. 'it' in Rspec. The trick bid is to get that click_link, click_button and more and more clicks and buttons to learn. It will take away but hey, I am here to learn!
+
+I am doing at the moment an HTML tutorial on [W3School](http://www.w3schools.com/html/) which is making things a lot more easier. I do recommend to anyone who wants to start using HTML.
+
+This is all for today. I will keep reading the tutorial and hopefully I will finish it by the end of tonight.
+
+Bye
+
+__Zhivko__
