@@ -6,21 +6,21 @@ date: 2015-09-16 20:49:22
 Today has been a long time. We continued with our Battleships' assignment and in our standup in the morning everyone was struggling to upload a board on the website. So the goal for the morning was clear: create a method which returns an output in an HTML format. My pair partner and I managed to do write a method by 12 o'clock.
 
     def print_table
-    result = "<table border = '1'>\n"
-    @grid.keys.each_slice(10) do |slice|
-      new_result = "<tr>\n"
-      slice.each do |element|
-        if grid[element].content.is_a? Ship
-          vis = 'S'
-        else
-          vis = 'O'
+      result = "<table border = '1'>\n"
+      @grid.keys.each_slice(10) do |slice|
+        new_result = "<tr>\n"
+        slice.each do |element|
+          if grid[element].content.is_a? Ship
+            vis = 'S'
+          else
+            vis = 'O'
+          end
+          new_result << "<td>#{vis}</td>\n"
         end
-        new_result << "<td>#{vis}</td>\n"
+        new_result << "</tr>\n"
+        result << new_result
       end
-      new_result << "</tr>\n"
-      result << new_result
-    end
-    "#{result} \n</table>"
+      "#{result} \n</table>"
     end
 
 The code would need to be refactored but we were still very happy with the result. We then had a quick lunch break and went downstairs for charity jamboree where 4 charities pitched their ideas for the Senior's final projects. It was really an interesting even I am looking forward to the pitches for our final projects in a couple of weeks.
