@@ -1,0 +1,37 @@
+---
+layout: post
+title: "Week 3, Day 4"
+date: 2015-09-17
+---
+Today has gone really quickly. Our standup in the morning went smoothly as everyone was making progress throught the assignment. We rapped up really quickly and headed back upstairs.
+
+My pair partner and I has focused today on placing ships on the board and making sure that when you place a ship over another one, the website wouldn't crash. After some time we came up with:
+
+    get '/start_the_game' do
+      @failed = false
+
+      if params[:coordinate].nil?
+        erb :start_the_game
+      else
+        coord = params[:coordinate].to_sym
+        ship = Ship.new(session[:size])
+        begin
+          $board.place(ship, coord, :horizontally)
+        rescue
+          @failed = true
+        else
+          session[:size] += 1
+      end
+      erb :start_the_game
+    end
+
+I have learnt something new today - how to rescue. So we start with a ```begin``` where we specify the action that we want to execute, if the execution is successful then we jump over ```rescue``` and ```else```  will be executed. However, if our ```begin``` action fails, the code under ```rescue``` will be executed and the ```else``` block will be skipped.
+
+In the evening, we decided to go to a Ruby Meetup which was orignised by one of Makers competitors. I have uploaded a picture of all of us going there. To summarise, I didn't find it very helpful and I am glad that I have chosen Makers Academy.
+
+![Makers]({{http://zsid.github.io./2015/09/14/Week-3-Day-1.html }}/images/makers.jpg)
+
+
+Good night.
+
+__Zhivko__
