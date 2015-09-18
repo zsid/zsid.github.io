@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Week 3, Day 5"
+date: 2015-09-19 17:30
+---
+
+Today has been a long day. Our standup at 9 went really quickly and we had a talk on MVC(Model, View, Controller). The talk finished at 12 and I had a quick launch and then attended the lunch talk by [Fred George](http://c2.com/cgi/wiki?FredGeorge). It was an amazing one and LOL there is so much work I need to do to become a great developer!
+
+After the lunch talk, today has been a relaxing one: playing table tennis, reading my code review notes and waiting for the challenge to be released.
+
+Our weekend challenge is to build a Rock-Paper-Scissor game and host it on the web. As simple as it may sound I am pretty sure I will do a LOT of work and reading during the weekend. As my energy level is very low today, I plan to write few test and call it a day.
+
+__Zhivko__
