@@ -1,0 +1,52 @@
+---
+layout: post
+title: "Week 3, Day 6"
+date: 2015-09-19 21:55:20
+---
+I am really pleased with myself today. The good news is I have managed to create a Rock-paper-scissors game against a computer and for two players. The bad news is, I need to work a LOT on getting in on the web.
+
+The code of the day is reducing the dependency of my Computer class so that the computer can take any 'hands' and pick one.
+
+```class Options
+
+  attr_reader :choices
+
+  def initialize
+    @choices = []
+  end
+
+  def add_choice(*new_entries)
+    new_entries.each { |new_entry| choices << new_entry unless choice_added?(new_entry) }
+  end
+
+  private
+
+  def choice_added?(choice)
+    choices.include?(choice)
+  end
+
+end```
+
+My 'Options' class is the foundation of what my Computer class will take. So once, we have decided what 'choices' our computer will have, we can initialize it:
+
+```class Computer
+
+  attr_reader :options
+
+  def initialize(options)
+    @options = options.choices
+  end
+
+  def choose
+    options.sample
+  end
+
+end```
+
+I am also calling the method ```choices``` on the passing parameter to further reduce the dependency of my Computer class. Anything that cannot react to the ```choices``` method will throw an error.
+
+This is all for today.
+
+Good night.
+
+__Zhivko__
