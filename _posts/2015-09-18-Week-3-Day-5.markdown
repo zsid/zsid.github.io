@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Week 3, Day 5"
-date: 2015-09-19 17:30
+date: 2015-09-18 17:30
 ---
 
 Today has been a long day. Our standup at 9 went really quickly and we had a talk on MVC(Model, View, Controller). The talk finished at 12 and I had a quick launch and then attended the lunch talk by [Fred George](http://c2.com/cgi/wiki?FredGeorge). It was an amazing one and LOL there is so much work I need to do to become a great developer!
