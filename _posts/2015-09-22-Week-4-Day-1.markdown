@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Week 4, Day 1"
+date: 2015-09-22 21:35:22
+---
+Monday, Monday... Fun facts for Mondays:
+
+* Coach rotation - every week we have a different coach.
+* Our code is reviewed by the Seniors.
+* New challenge for the week.
+
+My code review today went well. Taking away responsibilities from my classes last night at 11pm paid off. However, my Controller is really really FAT and I need to put him on a diet. I will wait for my coach to recommend the diet and the right exercises.
+
+This week we are working with databases. Our project is to create a bookmark manager and we will be focusing on:
+
+* Relational databases
+* Security considerations
+* More feature testing with Capybara
+
+Hmmm, looks easy! (Not really)
+
+__Zhivko__
