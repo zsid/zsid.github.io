@@ -7,41 +7,41 @@ I am really pleased with myself today. The good news is I have managed to create
 
 The code of the day is reducing the dependency of my Computer class so that the computer can take any 'hands' and pick one.
 
-```class Options
+    class Options
 
-  attr_reader :choices
+      attr_reader :choices
 
-  def initialize
-    @choices = []
-  end
+      def initialize
+        @choices = []
+      end
 
-  def add_choice(*new_entries)
-    new_entries.each { |new_entry| choices << new_entry unless choice_added?(new_entry) }
-  end
+      def add_choice(*new_entries)
+        new_entries.each { |new_entry| choices << new_entry unless choice_added?(new_entry) }
+      end
 
-  private
+      private
 
-  def choice_added?(choice)
-    choices.include?(choice)
-  end
+      def choice_added?(choice)
+        choices.include?(choice)
+      end
 
-end```
+    end
 
 My 'Options' class is the foundation of what my Computer class will take. So once, we have decided what 'choices' our computer will have, we can initialize it:
 
-```class Computer
+    class Computer
 
-  attr_reader :options
+      attr_reader :options
 
-  def initialize(options)
-    @options = options.choices
-  end
+      def initialize(options)
+        @options = options.choices
+      end
 
-  def choose
-    options.sample
-  end
+      def choose
+        options.sample
+      end
 
-end```
+    end
 
 I am also calling the method ```choices``` on the passing parameter to further reduce the dependency of my Computer class. Anything that cannot react to the ```choices``` method will throw an error.
 
