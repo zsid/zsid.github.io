@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Week 4, Day 2"
+date: 2015-09-23 22:10:12
+---
+Our 9 o'clock standup went relatively smoothly and we quickly went back to our desks and resumed the database exercises. I have come to realise how easy it was to make typos which could have a detrimental impact on your result. For example, I spent long time on Sunday working out why my computer test kept failing.
+
+My test was:
+
+
+    describe Computer do
+
+      let(:options) { double :options }
+
+      it 'can choose a random option' do
+        allow(options).to receive(choices).and_return([:rock, :paper])
+        computer = Computer.new(options)
+        expect(computer.options).to include(computer.choose)
+      end
+
+    end
+
+And my error message was:
+
+    Failures:
+
+    1) Computer can choose a random option
+    Failure/Error: allow(options).to receive(choices).and_return([:rock, :paper])
+    NameError:
+    undefined local variable or method `choices' for #<RSpec::ExampleGroups::Computer:0x007fd2ac23ad80>
+
+I was going over and over again why my ```choices``` method wasn't working. Have you spotted why?
+
+The reason was I had missed to put a colon ```:``` i.e. ```:choices```. Yeah...
+
+And today, a long long time was spent figuring out why one of my feature tests was failing. The reason you may ask? I was getting an error 500 which meant that there was something wrong with my database... well there was something wrong with my spelling - I was calling ```Link.urls``` to view all the urls in my database table but.... ```urls``` was not the correct spelling... it was ```url```.
+
+So from now on whenever I receive an error message, the first thing I check is my spelling.
+
+And to finish for today with a quote from Jon Duckett's HTML book "Work is the refuge of people who have nothing better to do".
+
+Good night
+
+__Zhivko__
