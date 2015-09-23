@@ -17,8 +17,8 @@ Week 3
 
 * I have found Capybara syntax challenging.
 * I am not feeling comfortable using CSS. I will need to do additional reading on it.
-* I have understood the general idea behind REST but still need to get my head around the verbs(get,post,puts,delete).
-* Making my Controller 'skinny' is also challenging.
+* I have understood the general idea behind REST but still need to get my head around the verbs(get, post, put, delete).
+* Making my Controller 'skinny' is also very challenging.
 
 
 ####Changes I Plan to Make Next Week:

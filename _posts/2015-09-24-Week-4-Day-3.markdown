@@ -1,0 +1,47 @@
+---
+layout: post
+title: "Week 4, Day 3"
+date: 2015-09-24 21:35:55
+---
+The morning standup was a quick one and we returned to our desks. My pair made good progress in the morning and we had an hour lunch break from 12:30 until 13:30. From 13:30 until 14:30 we were reviewing our code from the morning and headed down for our standups (we were in different bytes) at 14:30.
+
+The 14:30 standup ended relatively quickly as we had a session focused on heroku as many of us were finding it challenging to upload their bookmark managers on the web, using heroku. After the session, my pair partner and I resumed going through the exercises and ended the day experimenting with our results.
+
+Our major challenge was to understand to logic behind DataMapper's Validation Confirmation. So our code looked like this:
+
+    class User
+      include DataMapper::Resource
+
+      property :id, Serial
+      property :email, String
+      property :password_digest, Text
+
+      attr_reader :password
+      attr_accessor :password_confirmation
+
+      validates_confirmation_of :password
+
+      def password=(password)
+        @password = password
+        self.password_digest = BCrypt::Password.create(password)
+      end
+
+    end
+
+We were asking the user to fill in a form and submit it. We were then using the information to create a user in our database. The code in our Controller looked like this and the parameteres were provided by the user when they submitted their form earlier:
+
+    post '/users' do
+      user = User.create(email: params[:email], password: params[:password], password_confirmation: params[:password_confirmation])
+      session[:user_id] = user.id
+      redirect '/users'
+    end
+
+As you could see, we were asking the user to provide an email address, password and to confirm that password. If the passwords were not identical, the creation of a new user would fail. However, it took us a long time to get our heads around, how on earth it was doing the comparison between the password and the password_confirmation inputs. The magic happened thanks to `validates_confirmation_of` in our User class.
+
+
+What ```validates_confirmation_of``` did was it took a parameter, in our case ```:password```, and by default the value it's looking to compare the parameter in question ( i.e. ```:password```)
+was ```#{parameter}_confirmation``` - i.e ```password_confirmation```. As you can see our user had already given us the `password_confirmation` information and thanks to the ```password``` method, we had also assigned the user's input of the password to the ```@password``` variable which we could read thanks to our ```attr_reader```. What happened next was, the DataMapper did its magic and compared our ```password``` and  ```password_confirmation``` and if they were identical proceeded by generating an encrypted password (2nd line of our password method) and now we had all of our information to create an user in our database (`property: id` would be generated automatically, however we would have needed values for the ```property: email``` and `property :password_diggest`) which we now had.
+
+Are you still awake? I am not, good night.
+
+__Zhivko__
