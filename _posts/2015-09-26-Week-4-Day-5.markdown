@@ -1,0 +1,33 @@
+---
+layout: post
+title: "Week 4, Day 5"
+date: 2015-09-26 18:24:10
+---
+####Most Important Things I Learned:
+-------------------------------
+
+* How to test using DataMapper and Factory Girl.
+* How to query databases for information.
+* The semantics behind storing passwords in databases.
+
+####Things I Struggled With The Most:
+-------------------------------
+
+* Understanding the logic behind DataMapper methods.
+* Partials and how to structure my setup properly.
+
+
+####Changes I Plan to Make Next Week:
+-------------------------------
+
+* Light reading on Sinatra and in particular how to use partials and set up properly my working environment.
+* Attend all of the yoga classes.
+
+
+####Other Experiences or General Feedback This Week:
+-------------------------------
+
+* I have found the exercises very helpful and enjoyed them all. I have discovered that when I pair programme I am more focused compared to working on my own.
+
+
+__Zhivko__
