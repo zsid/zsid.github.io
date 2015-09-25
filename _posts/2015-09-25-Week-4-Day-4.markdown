@@ -3,7 +3,7 @@ layout: post
 title: "Week 4, Day 4"
 date: 2015-09-25 20:40:22
 ---
-The morning started as usual - standup at 9 o'clock sharing our ups and downs from yesterday afternoon and we returned at our desk. Please have a look at my previous [blog post](Week-4-Day-3.html) and you can see what my challenge was for the afternoon.
+The morning started as usual - standup at 9 o'clock sharing our ups and downs from yesterday afternoon and we returned at our desk. Please have a look at my previous [blog post](http://zsid.github.io/2015/09/24/Week-4-Day-3.html) and you can see what my challenge was for the afternoon.
 
 Today my pair partner wasn't feeling very well and stayed at home. I spent the morning going through my code again and did some additional reading on the terminology. Lunch time was around the corner in no time and after that I paird with Tim whose pair was also not feeling very well. I am really happy with the our progress in the afternoon and my main challenge was to understand this:
 
