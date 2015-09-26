@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Week 4, Day 3"
-date: 2015-09-24 21:35:55
+date: 2015-09-23 21:35:55
 ---
 The morning standup was a quick one and we returned to our desks. My pair made good progress in the morning and we had an hour lunch break from 12:30 until 13:30. From 13:30 until 14:30 we were reviewing our code from the morning and headed down for our standups (we were in different bytes) at 14:30.
 

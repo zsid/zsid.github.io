@@ -1,0 +1,28 @@
+---
+layout: post
+title: "Week 4, Day 6"
+date: 2015-09-26 22:30:44
+---
+Today has gone really quickly. In fact, I have discovered that I have been a day ahead on my blog as I started Monday as the 22 September and carried over just looking at the previous day. You can say lucky me, I now have one more day to spare - Sunday. Wrong!
+
+I have again rediscovered how frustrating it is for our tests to fail when you think they should be passing... only to discover a __typo__ or missed `:` or `=`... That's just killing me. I know I have said it before but again and again I will repeat it to myself - "Test not passing? Look for typos...". Let's have a look at the following example:
+
+Our weekend challenge is to build <del>tweeter</del> chitter and I have created a user and <del>tweets</del> peeps. I am using Sinatra to build the website and whenever there is a layout.erb file, by default Sinatra will go and find it. The problem was whenever my ``layout.erb`` file was 'visible' to Sinatra, most of my tests were breaking. I was stuck for an hour. At the end I just deleted mostly everything from my ``layout``, here it is below:
+
+    <html>
+    <head>
+      <title> Welcome to Chitter </title>
+    </head>
+
+    <% yield %>
+    </html>
+
+As I said, Sinatra will automatically load it and use it on every page unless we haven't specified otherwise. Alas, my tests were still breaking even though there was virtually nothing in the 'layout' file. Do you know why?
+
+Let me tell you why...beucase of.... TADAAAAA... Last week I was stuck because I had missed a `:`... this week I am stuck because I have missed ``=`` - i.e.  `<%= yield %>`.
+
+The good news is I am just about to go to bed and I know why it wasn't working. I will sleep better now.
+
+Good night
+
+__Zhivko__

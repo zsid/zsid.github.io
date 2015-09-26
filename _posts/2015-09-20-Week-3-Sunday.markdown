@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Week 3, Sunday"
-date: 2015-09-21 22:50:22
+date: 2015-09-20 22:50:22
 ---
 Week 3
 ======
