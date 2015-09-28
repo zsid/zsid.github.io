@@ -1,0 +1,32 @@
+---
+layout: post
+title: "Week 5, Day 1"
+date: 2015-09-28 22:02:16
+---
+As you already know on a Monday, we have our code reviews with the seniors and embark on a new journey. My standup at 9 o'clock was of great benefit to me. I struggled for a few hours on Sunday to figure out why my `flash` wasn't working:
+
+    post '/user/login' do
+      user = User.login(params[:user], params[:login_password])
+      if user
+        session[:user_id] = user.id
+        redirect to '/peeps'
+      else
+        flash.now[:errors] = ['The username or password is incorrect']
+        redirect to '/'
+      end
+    end
+
+I wanted to display an error message, when someone wanted to login with incorrect credentials. As a result, I was having an error message (i.e. The username or password is incorrect) and redirecting them to the Login page. As you could imagine, I was only redirecting people to the login page without displaying any messages.
+
+Why was that? Look closely at my flash message. I have discovered that `flash.now` saves the message only within the scope of the current request. In other words, I could use `flash.now` if I was using a view file rather than redirecting i.e.:
+
+    else
+      flash.now[:errors] = ['The username or password is incorrect']
+      erb :index
+    end
+
+However, as I was redirecting the user to a new page, I should have used either `flash.next` or just `flash` rather than `flash.now`. Simple right? Well, I had a long day yesterday...
+
+I will keep it a secret and let you know tomorrow what we are doing this week. Good night.
+
+__Zhivko__
