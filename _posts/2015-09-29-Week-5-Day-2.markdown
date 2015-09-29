@@ -1,0 +1,54 @@
+---
+layout: post
+title: "Week 5, Day 2"
+date: 2015-09-29 21:43:22
+---
+The morning standup finished quickly and everyone returned to their desks. We are focusing on JavaScript this week, using Jasmine as a testing framework. Having done Ruby for the last 6 weeks, JavaScript seems a little bit alien at first as it doesn't have classes at all, or even objects in the same way as Ruby. The comforting thing is that Jasmine has similar syntax to Rspec but I won't go as far as to say I am feeling really comfortable with it.
+
+An interesting thing about JavaScript is that a block doesn't create a new scope, so variables should be defined at the top of the function and not in the block.
+
+My pair's focus in the morning was recreating the Airport challenge from week 1. We then had lunch, did some coding and had a standup at 14:30 where we were told to start working on our challenge this week which was creating a Thermostat.
+
+By the end of today we managed to complete the logic behind Thermostat. I have posted a sample code below so that you can see the different between Ruby and JavaScript:
+
+
+    JavaScript:
+    function Thermostat() {
+      this.temperature = 20;
+      this.powerSavingMode = true
+    };
+
+    Ruby:
+    class Thermostat
+      attr_accessor :temperature, :power_saving_mode
+      def initialize
+        @temperature = 20
+        @power_saving_mode = true
+      end
+    end
+
+
+    Method in JavaScript:
+    Thermostat.prototype.increaseTemperature = function() {
+      if (this.temperature < 25 && this.powerSavingMode) {
+        this.temperature = this.temperature + 1;
+      };
+      if (this.temperature < 32 && !this.powerSavingMode) {
+        this.temperature = this.temperature + 1;
+      };
+    };
+
+    Method in Ruby:
+    def increase_temperature
+      if temperature < 25 && power_saving_mode
+        temperature += 1
+      elsif temperature < 32 && !power_saving_mode
+        temperature += 1
+      end
+    end
+
+I know looking at Ruby's method definition is a pain but I wanted to recreate exactle the same code from JavaScript into Ruby and you can see Ruby is easier to follow and grasp what's happening, whereas JavaScript can raise a few eyebrows if you are unfamiliar with the syntax. Also the naming convention in JavaScrip and Ruby is different. A little homework for you to work out the differences.
+
+Good night.
+
+__Zhivko__
