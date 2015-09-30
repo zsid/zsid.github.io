@@ -38,4 +38,8 @@ Next, we had to figure out how to do the same thing as above but with jQuery. Ou
 
 My initial impression of JavaScript was a negative one as I was missing my beloved Ruby. However, as the week is passing by I start to enjoy JavaScript and it's not that bad after all.
 
+![Thermostat]({{http://zsid.github.io./2015/09/14/Week-5-Day-3.html }}/images/thermostat.png)
+
+
+
 __Zhivko__
