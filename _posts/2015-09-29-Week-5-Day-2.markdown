@@ -28,7 +28,7 @@ By the end of today we managed to complete the logic behind Thermostat. I have p
     end
 
 
-    Method in JavaScript:
+    JavaScript:
     Thermostat.prototype.increaseTemperature = function() {
       if (this.temperature < 25 && this.powerSavingMode) {
         this.temperature = this.temperature + 1;
@@ -47,7 +47,7 @@ By the end of today we managed to complete the logic behind Thermostat. I have p
       end
     end
 
-I know looking at Ruby's method definition is a pain but I wanted to recreate exactle the same code from JavaScript into Ruby and you can see Ruby is easier to follow and grasp what's happening, whereas JavaScript can raise a few eyebrows if you are unfamiliar with the syntax. Also the naming convention in JavaScrip and Ruby is different. A little homework for you to work out the differences.
+I know looking at Ruby's method definition is a pain but I wanted to recreate exactly the same code from JavaScript into Ruby and you can see Ruby is easier to follow and grasp what's happening, whereas JavaScript can raise a few eyebrows if you are unfamiliar with the syntax. Also the naming convention in JavaScrip and Ruby is different. A little homework for you to work out the differences.
 
 Good night.
 

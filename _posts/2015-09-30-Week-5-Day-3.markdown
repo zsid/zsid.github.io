@@ -1,0 +1,41 @@
+---
+layout: post
+title: "Week 5, Day 3"
+date: 2015-09-30 21:15:22
+---
+Today was all about building a static HTML page as the user interface for my thermostat. At first, my pair added JavaScript to enable our HTML page to interact with our thermostat object. This exercise took us the whole morning as we were unable to find a way for our JavaScript to interact with the HTML page. The mystery was solved by DOM (Document Object Model). The Document Object Model is a programming interface for HTML, XML and SVG documents. It provides a structured representation of the document (i.e. our HTML page) and it defines a way that the structure can be accessed from programs so that they can change the document structure, style and content. I have provided a sample code below:
+
+    var thermostat = new Thermostat();
+
+    displayThermostat();
+
+    function displayThermostat (){
+      document.getElementById("temperature").innerHTML = thermostat.temperature
+      document.getElementById("temperature").style.color = thermostat.colour()
+    };
+
+    document.getElementById("up").onclick = function () {
+      thermostat.increaseTemperature();
+      displayThermostat();
+    };
+
+Next, we had to figure out how to do the same thing as above but with jQuery. Our final result was:
+
+    (document).ready(function() {
+      var t = new Thermostat();
+
+      var display = function() {
+       $('#temperature').html(t.temperature);
+       $("#temperature").css("color", t.colour());
+      };
+
+      display();
+
+      $('#up').click(function() {
+        t.increaseTemperature()
+        display();
+      });
+
+My initial impression of JavaScript was a negative one as I was missing my beloved Ruby. However, as the week is passing by I start to enjoy JavaScript and it's not that bad after all.
+
+__Zhivko__
