@@ -1,0 +1,48 @@
+---
+layout: post
+title: "Week 5 Day 4"
+date: 2015-10-01 19:44:22
+---
+It is October already and tomorrow is the graduation of the July's cohort. LOL! This means from next week, we are going to be Seniors! LOL..And will be reviewing the Juniors' challenges once they have joined us. The time is flying!
+
+Today we were getting our Thermostat to display the weather in different locations. The user would enter a city (i.e. London) and the temperature in London should be displayed on the screen. This took us a lot of time and we finally managed to do it:
+
+    $("#btnGetWeather").click(function(){
+
+      var requestData = $("#txtCity").val() + ',' + $("#txtCountry").val() + '&units=metric'
+      var resultElement = $("#resultDiv");
+
+      var link = 'http://api.openweathermap.org/data/2.5/weather?q=' + requestData;
+
+      $.ajax({
+        url: link,
+        success: function(data) {
+          resultElement.html('Temperature: ' + data.main.temp + '&deg;C' + '<br />' +
+            'Wind: ' + data.wind.speed);
+        }
+      });
+    });
+
+And the HTML code was:
+
+    <table style="text-align: right">
+      <tr>
+        <td style="color: white"> City</td>
+        <td><input type="text" id="txtCity" /></td>
+      </tr>
+      <tr>
+        <td style="color: white"> Country </td>
+        <td><input type="text" id="txtCountry" /></td>
+      </tr>
+    </table>
+    <input type="button" id="btnGetWeather" value="Get Weather Data" />
+    <br /><br />
+    <div id="resultDiv" style="color: white">
+    </div>
+
+
+TA DAAA... Simple, right? :-)
+
+As I have mentioned earlier, the Seniors are graduating tomorrow so if you are in London come and say hi. I will advise to come around 17:00ish. See you tomorrow!
+
+__Zhivko__
