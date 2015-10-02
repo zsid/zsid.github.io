@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Week 5, Day 5"
+date: 2015-10-02 16:25:22
+---
+Our morning standup finished quickly and we were back at our desks. I spent the morning reading about HTML and CSS. We had a retrospective as usual in our standup at 14:30 and as it would be Lab week next week (everyone can focus on whatever they want) we were discussing what everyone would be doing. You can see in the picture below:
+
+![labweek]({{http://zsid.github.io./2015/09/14/Week-5-Day-5.html }}/images/labweek.jpg)
+
+
+Also it is Friday but... This Friday is a graduation time at MA and the July 2015 cohort are presenting their final projects at 17:30. If you are in London do come and see us! See you there!
+
+![Preparation]({{http://zsid.github.io./2015/09/14/Week-5-Day-3.html }}/images/preparation.jpg)
+
+__Zhivko__
