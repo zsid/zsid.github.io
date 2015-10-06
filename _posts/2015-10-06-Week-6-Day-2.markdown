@@ -1,0 +1,17 @@
+---
+layout: post
+title: "Week 6, Day 2"
+date: 2015-10-06 15:30:22
+---
+I have been focused today on refactoring one of my weekend challenges: the chitter challenge. The challenge involved creating a Twitter clone which would allow the users to post messages to a public stream. I have also uploaded my app on heroku. Click [here](https://zhivko-chitter.herokuapp.com/) to see it.
+
+I will outline the steps for uploading my app on heroku in case anyone has had troubles doing it.
+
+* Include a gem called `pg` in your Gemfile and run `bundle install`.
+* I have used DataMapper so in my data_mapper_setup file I have included the following: ```DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/chitter_challenge_#{env}')```. You can find more information [here](https://devcenter.heroku.com/articles/rack#using-datamapper-or-sequel) on how to deploy Rack-based Apps on heroku.
+* You will need to have installed heroku's toolbelt for the next steps. Run `heroku create name_of_your_app` and heroku will do it.
+* As I have used postgres as my database we will run `heroku addons:create heroku-postgresql:hobby-dev` which will create a postgresql database called hobby-dev. You can use whatever name you want. Read more about postgres [here](https://devcenter.heroku.com/articles/heroku-postgresql#provisioning-the-add-on).
+* The final step is `git push heroku master` and hopefully the setup will go smoothly.
+* Run `heroku open` and you should see your masterpiece.
+
+__Zhivko__
