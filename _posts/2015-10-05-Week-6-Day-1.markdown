@@ -1,0 +1,31 @@
+---
+layout: post
+title: "Week 6, Day 1"
+date: 2015-10-05 21:22:21
+---
+Week 5
+======
+
+Most Important Things I Learned:
+-------------------------------
+
+* How to test with Jasmine and general understanding of JavaScript's syntax
+* What Hoisting is and JavaScript interacts with web pages.
+
+Things I Struggled With The Most:
+-------------------------------
+
+* JSON and API calls.
+* jQuery syntax.
+
+
+Changes I Plan to Make Next Week:
+-------------------------------
+
+* Finish Jon Duckett's HTML & CSS Book      
+* Try to finish Jon Duckett's JavaScript book and build a game.
+
+Other Experiences or General Feedback This Week:
+-------------------------------
+
+* I would have appreciated if there were pills on JSON and AJAX.
