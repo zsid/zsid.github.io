@@ -1,0 +1,55 @@
+---
+layout: post
+title: "Week 6, Day 3"
+date: 2015-10-07 23:45
+---
+Today was a relatively quiet one. I spent the morning recreating the Rock-Paper-Scissor game in JavaScript. I have tried to implement the Single Responsibility Principle in my code. My player looked like this:
+
+    var Player = function(name) {
+      this.name = name
+    };
+
+    Player.prototype.pick = function(option) {
+      return option;
+    };
+
+Computer:
+
+    var Computer = function(option1, option2, option3) {
+      this.options = [option1, option2, option3]
+    };
+
+    Computer.prototype.pick = function() {
+      return this.options[Math.floor(Math.random() * this.options.length)]
+    };
+
+And Game:
+
+    var defeats = {
+      rock: 'scissors',
+      paper: 'rock',
+      scissors: 'paper'
+    };
+
+    var Game = function(defeats) {
+      this.defeats = defeats
+    };
+
+    Game.prototype.play = function (playerPick, computerPick) {
+      if (playerPick === computerPick) {
+        return 'It\'s a draw!'
+      } else if (this.defeats[playerPick] === computerPick){
+        return 'Player wins!'
+      } else {
+        return 'Computer wins!'}
+    };
+
+
+I wanted to be able to pass the rules to the Game, rather than hard coding them.  Creating an object in JavaScript proved to be the solution but it took some time to figure out how to return the values as I was passing a string and
+`game.defeats.'rock'` wasn't working. The solution was to pass the string like this: `game.defeats['rock']` and now it was working! WIN!
+
+I will focus tomorrow on doing the front end. Let's hope it will go well.
+
+Good night.
+
+__Zhivko__
