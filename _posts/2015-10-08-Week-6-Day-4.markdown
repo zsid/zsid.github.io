@@ -1,0 +1,32 @@
+---
+layout: post
+title: "Week 6, Day 4"
+date: 2015-10-08 21:00:00
+---
+I haven't been very well today and couldn't cover as much as I wanted. Our weekend challenge is to create a Bowling scorecard which will keep the scores for a player. I have started working on the logic and I have made some progress. What I have done so far is:
+
+    var Game = function() {
+      this.frameTurn = 1
+      this.throw = 1
+      this.score = {1: [], 2: [], 3: []}
+    };
+
+    Game.prototype._strike = function() {
+      this.score[this.frameTurn].push(10)
+      return 'X'
+    };
+
+    Game.prototype.currentThrowScore = function(pinsKnocked) {
+      if (pinsKnocked === 10 && this.throw === 1) {
+        return this._strike();
+      } else {
+        this.score[this.frameTurn].push(pinsKnocked)
+        return pinsKnocked;
+      }
+    };
+
+It's a start. I will go to bed now and try to recover for tomorrow.
+
+Good night
+
+__Zhivko__
