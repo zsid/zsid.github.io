@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Week 7, Day 1"
+date: 2015-10-12 21:32:22
+---
+It is week 7 already! The time is flying! The juniors have officially started today and people have started referring to us as Seniors....LOL!
+
+We have started the day with the Juniors' introductory presentation where everyone had to introduce the person next to them. This was easy as I already knew everyone in our cohort and didn't have any problems with the names!Phew!
+
+It is Rails this week so after the introductions my cohort had a short presentation on Rails and started this week's challenge which was to build a [Yelp](http://www.yelp.co.uk/) clone. For those of you who are unfamiliar with Yelp, Yelp is an American company and on their website you can publish reviews about local business (i.e. restaurants, shops, coffee shops etc). So yes, it will be fun and I am looking forward to this.
+
+Let the Rails begin!
+
+
+__Zhivko__
