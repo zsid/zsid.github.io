@@ -1,0 +1,64 @@
+---
+layout: post
+title: "Week 7, Day 2"
+date: 2015-10-13 10:02:22
+---
+Our morning standups are now starting at 9:30 and we were given our first project assignment which was to find the difference between:
+
+1.  `rails g controller name [arg1]` vs `rails g controller name`
+2.  `rails g model name [arg]` vs `rails g model name`
+
+My pair partner and I decided to time box this to an hour max and you can see below what we've discovered.
+
+* The controller generator is expecting parameters in the form of `generate (short 'g') controller ControllerName action1 action2`. So if we make a Greetings controller with an action of `hello`. We will run:
+
+        bin/rails generate controller Greetings hello
+          create  app/controllers/greetings_controller.rb
+            route  get "greetings/hello"
+           invoke  erb
+           create    app/views/greetings
+           create    app/views/greetings/hello.html.erb
+           invoke  test_unit
+           create    test/controllers/greetings_controller_test.rb
+           invoke  helper
+           create    app/helpers/greetings_helper.rb
+           invoke  assets
+           invoke    coffee
+           create      app/assets/javascripts/greetings.js.coffee
+           invoke    scss
+           create      app/assets/stylesheets/greetings.css.scss
+
+  This will create the controller file and create a method for us called `hello` which is our action and as you can see from above we also have a view file for it. You can the method in our controller below:
+
+        class GreetingsController < ApplicationController
+          def hello
+          end
+        end
+
+Saves us time! If we run it without an argument i.e. action, it will just generate an empty controller and no view files.
+
+
+* The module generator is expecting parameters in the form of `generate model ModelName arg1:type arg2:type` etc. So we will run:
+
+        rails g model minion eyes:integer colour:text
+             invoke  active_record
+             create    db/migrate/20151013092345_create_minions.rb
+             create    app/models/minion.rb
+
+And it will create a migration file which is a modification of our database. In this case, as we don't have a minion's table it will create it for us with two columns `eyes`, taking a number (integer) value, and `colour`, which will take a text value. It will also create the action model for the minion. For a reference, our migration file code is looking like this:
+
+    class CreateMinions < ActiveRecord::Migration
+     def change
+       create_table :minions do |t|
+         t.integer :eyes
+         t.text :colour
+
+         t.timestamps null: false
+       end
+     end
+    end
+
+
+On the other hand, if we run `rails g model minion` without an argument, it will generate an empty table and a model.
+
+__Dan & Zhivko__
