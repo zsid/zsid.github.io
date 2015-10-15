@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Week 7, Day 4"
+date: 2015-10-15 22:12:22
+---
+Not much to report today. I have spent the day reviewing what we have covered in the previous days. I have also read some of the [Rails Guides](http://guides.rubyonrails.org/). I have found really helpful [Getting Started with Rails](http://guides.rubyonrails.org/getting_started.html), [Active Record Basics](http://guides.rubyonrails.org/active_record_basics.html), [Active Record Migrations](http://guides.rubyonrails.org/active_record_migrations.html) and [Active Record Associations](http://guides.rubyonrails.org/association_basics.html). I will definitely reread them again and again and again so that I am really comfortable with them. I do recommend them to familiarise yourself with them if you will be working with Rails.
+
+Our weekend challenge will be to build an Instagram clone so I am looking forward to it.
+
+Good night.
+
+__Zhivko__
