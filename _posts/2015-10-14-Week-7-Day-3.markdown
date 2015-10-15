@@ -1,0 +1,67 @@
+---
+layout: post
+title: "Week 7, Day 3"
+date: 2015-10-14 23:45:22
+---
+We didn't have much to discuss in our standup this morning - most of us had finished the first part of the week's challenge and we had been going through the second part.
+
+My pair partner and I spent the morning, working out how to allow users to log in to our website, using a 3rd party login such as Facebook, Twitter and Github. We have added a gem called `omniauth-facebook` to our Gemfile which allowed us to add Facebook as a provider.
+
+I will quickly go through how we have added Facebook to our website. The material is taken from [here](https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview).
+
+* After running bundle, we have added the columns 'provider' (value string) and 'uid' (value string) to our User model, by running in our command line (in the project's directory) `bin/rails g migration AddOmniauthToUsers provider:index uid:index` and `bin/rake db:migrate`
+
+* Next, we have declared the provider in our config/initializers/devise.rb: `config.omniauth :facebook, "APP_ID", "APP_SECRET"` and replaced APP_ID and APP_SECRET with our app id and secret. Note, to get our "APP_ID" and "APP_SECRET", we have created a [Facebook Developer application](https://developers.facebook.com/), making note of the two keys we have been given. We have also added extra fields to our code as Facebook have changed to api v2.4 since 8 July 2015: `config.omniauth :facebook, "APP_ID", "APP_SECRET", scope: 'email', info_fields: 'email'`
+
+* The next thing we did is to implement a callback and in our `config/routes.rb` file and tell Devise in which controller we would implement Omniauth callbacks: `devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }`
+
+* We have now created new folder and file in our controller as follow "app/controllers/users/omniauth_callbacks_controller.rb" and added the following code:
+
+      class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
+        def facebook
+          # You need to implement the method below in your model (e.g. app/models/user.rb)
+          @user = User.from_omniauth(request.env["omniauth.auth"])
+
+          if @user.persisted?
+            sign_in_and_redirect @user, :event => :authentication #this will throw if @user is not activated
+            set_flash_message(:notice, :success, :kind => "Facebook") if is_navigational_format?
+          else
+            session["devise.facebook_data"] = request.env["omniauth.auth"]
+            redirect_to new_user_registration_url
+          end
+        end
+      end
+
+* As we could see from the code above, we would need to create the method `from_oniauth` in our user model (i.e. app/models/user.rb ):
+
+      def self.from_omniauth(auth)
+        where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+          user.email = auth.info.email
+          user.password = Devise.friendly_token[0,20]
+          user.name = auth.info.name   # assuming the user model has a name
+          user.image = auth.info.image # assuming the user model has an image
+        end
+      end
+
+
+* Last but not least, we have captured a copy of the Facebook email (once the authorisation from the method above is completed) by adding:
+
+      class User < ActiveRecord::Base
+        def self.new_with_session(params, session)
+          super.tap do |user|
+            if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+              user.email = data["email"] if user.email.blank?
+            end
+          end
+        end
+      end
+
+
+One thing to note is that we are using a gem called `devise` which has created the user login, logout, signing up etc. That's why we haven't added sign-in and sign-out links to Facebook as Devise have done this for us. Nice, right?
+
+
+I also played some bridge tonight with a friend which was fun!
+
+Good night.
+
+__Zhivko__
