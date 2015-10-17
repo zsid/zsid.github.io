@@ -1,0 +1,57 @@
+---
+layout: post
+title: "Week 7, Day 5"
+date: 2015-10-16 21:22:23
+---
+Reading through the Rails guides yesterday, really helped me to understand the things which were happening today.
+
+As I was behind due to reading the Rails documentation, my pair partner and I spent the morning working on my codebase. The features which we added in the morning were:
+
+* Users can only leave one review per restaurant
+
+To do this, we added the user's id to the review's table and queried whether the current user's id matched the user id of the creator. The code in our review's controller looked like this:
+
+    def create
+      @restaurant = Restaurant.find(params[:restaurant_id])
+      @review = @restaurant.reviews.new(review_params)
+      @review.user_id = current_user.id
+
+      if @review.save
+        redirect_to restaurants_path
+      else
+        flash[:notice] = "You have already reviewed this restaurant"
+        redirect_to restaurants_path
+      end
+    end
+
+And in our review model we were validating the user_id against the restaurant_id and if there was already a restaurant_id in our review's table in the database for that user_id, the creation of a new review would fail.
+
+
+    class Review < ActiveRecord::Base
+
+      validates :user_id, uniqueness: { scope: :restaurant_id }
+
+    end
+
+
+* Users can delete only their own reviews
+
+Our destroy method followed the same logic:
+
+    def destroy
+      @restaurant = Restaurant.find(params[:restaurant_id])
+      @review = Review.find(params[:id])
+
+      if @review.user_id == current_user.id
+        @review.destroy
+      else
+        flash[:notice] = "Cannot delete"
+      end
+      redirect_to restaurants_path
+    end
+
+Believe it or not, I looked at the second part of the tutorial on Wednesday and back then I wasn't sure how to do it. Going through the Rails documentation yesterday really helped and thanks to that everything was making sense.
+
+We spent the afternoon adding an average rating to our restaurants and being able to upload a picture. We wrapped up around 17:30 and joined the rest of the cohort downstairs to play table tennis and card games.
+
+__Zhivko__
