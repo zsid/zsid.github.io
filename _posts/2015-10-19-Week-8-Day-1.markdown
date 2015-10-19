@@ -1,0 +1,77 @@
+---
+layout: post
+title: "Week 8, Day 1"
+date: 2015-10-19 22:15:22
+---
+It is week 8 already!!!!!LOOOOOL....the time is really flying!
+
+As I am a Senior now, every Monday I will be reviewing my mentee's weekend challenge! Unbeliviable right?!
+
+So, having said that I spent the morning doing my first code review (no pressure there) and I really enjoyed it! It was really great to see how far I had gone since joining Makers in September and that what I struggled with 7 weeks ago it was a lot more easier! The coaches have been really supportive about the code review too! They have pointed us in the right direction in terms of what a code should and should not include! Big thumbs up for Makers's coaches as always!
+
+We are looking at Angular this week and the afternoon was spent working through the materials and installing the appropriate tools.
+
+I have continued working on my instagram clone in the evening and I am really proud of what I have achieved. I was trying to display the number of likes a picture had and then when a user clicked on them I wanted to either increase them by one (if the user hadn't liked the page) or decrease them by 1 if he had done it. After several hours of going backwards and forwards I have finally done it:
+
+    class LikesController < ApplicationController
+
+      def create
+        @picture = Picture.find(params[:picture_id])
+        @like = @picture.likes.build
+        @like.user = current_user
+
+        if @picture.liked_by?(current_user)
+          flash[:notice] = 'Cannot like the same picture twice'
+        else
+          @like.save
+        end
+
+        redirect_to picture_path(@picture)
+      end
+
+      def destroy
+        @picture = Picture.find(params[:picture_id])
+        @like = Like.find(params[:id])
+        @like.destroy
+
+        redirect_to picture_path(@picture)
+      end
+
+    end
+
+    class Picture < ActiveRecord::Base
+
+      def liked_by?(user)
+        likes.include?(user)
+      end
+
+      def find_like(user)
+        likes.each do |like|
+          return like if like.user == user
+        end
+      end
+
+    end
+
+I have created two methods in my picture model: `liked_by?` checks if the user has liked the picture and `find_like` returns the actual like. The `find_like` method may seem redundant by I had problems returning the actual `like` in the view and getting the like's id for the destroy method:
+
+    <% if @picture.likes.none? %>
+      <p> <%= link_to 'Like', picture_likes_path(@picture), method: :post %> </p>
+
+    <% elsif @picture.find_like(current_user) %>
+      <p>
+        <%= link_to pluralize(@picture.likes.size, 'like'), picture_like_path(@picture, @picture.find_like(current_user)), method: :delete %>
+      </p>
+
+    <% else %>
+    <p>
+      <%= link_to pluralize(@picture.likes.size, 'like'), picture_likes_path(@picture), method: :post %>
+
+    </p>
+    <% end %>
+
+You maybe wondering why I haven't used `liked_by?(user)` in my `<% elsif @picture.find_like(current_user) %>`. I actually did try it but it wasn't working and my like couldn't be deleted. I am sure there is a more elegant way to do it by right now I will take this as a win!
+
+Good night.
+
+__Zhivko__
