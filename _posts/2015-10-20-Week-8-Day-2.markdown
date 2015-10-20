@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Week 8, Day 2"
+date: 2015-10-20 22:01:10
+---
+Not much to report today. Slowly going through Agular's materials and getting comfortable with how things are working. I have started doing the [Code School's](http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro?utm_source=google&utm_medium=cpc&utm_campaign=course&gclid=CjwKEAjwzJexBRCa_pGo8IK0ilASJABfGldbvvd2lMRakP4occ38xSxrtRHnSI0U5q6Ny1XvZq5tqhoCz1fw_wcB) Angular tutorial and it's been great so far! Do have a look at it if you are interested in Angular. I plan to do the [Code Academy](https://www.codecademy.com/courses/learn-angularjs) one as well so I will keep you posted whether to do both or focus on one.
+
+Good night.
+
+__Zhivko__
