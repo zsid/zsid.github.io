@@ -1,0 +1,131 @@
+---
+layout: post
+title: "Week 8, Day 3"
+date: 2015-10-21
+---
+
+Today has not been much different from yesterday. I have finally finished the Code School's tutorial and I have found it really helpful! Do recommend it to anyone! I will ask my pair partner for tomorrowto create a simple Rock-Paper-Scissors app using Angular. I will keep you posted. Here are my notes from Code school (I know there are unordered and all over the place, SRY!):
+
+    ng-model="review.stars"
+    ng-controller="StoreController as store"
+    ng-repeat="product in store.products"
+
+      <h1> {{prodct.price | currency}} - display it into dollars </h1>
+    for forms -  ng-submit="reviewCtrl.addReview(product)" , pass the product from above and add the review to it.
+    for validations - turn off default HTML Validation.. ie. novalidate and add required attribute at the end of the HTML tag and add a div for the submit button is reviewForm.$valid to check it
+
+
+    <form name="reviewForm"
+    ng-controller="ReviewController as reviewCtrl" ng-submit="reviewCtrl.addReview(product)" novalidate>
+
+      <!--  Live Preview -->
+      <blockquote>
+        <strong>{{reviewCtrl.review.stars}} Stars</strong>
+        {{reviewCtrl.review.body}}
+        <cite class="clearfix">—{{reviewCtrl.review.author}}</cite>
+      </blockquote>
+
+      <!--  Review Form -->
+      <h4>Submit a Review</h4>
+      <fieldset class="form-group">
+        <select ng-model="reviewCtrl.review.stars" required class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars">
+          <option value="">Rate the Product</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-group">
+        <textarea ng-model="reviewCtrl.review.body" required class="form-control" placeholder="Write a short review of the product..." title="Review"></textarea>
+      </fieldset>
+      <fieldset class="form-group">
+        <input ng-model="reviewCtrl.review.author" requiredtype="email" class="form-control" placeholder="jimmyDean@example.org" title="Email" />
+      </fieldset>
+      <fieldset class="form-group">
+        <input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+      </fieldset>
+    </form>
+
+
+`ng-include="'product-title.html'"`` when you extract a snippet from the code which is used in many places. Ng include is expecting a variable with the name of the file to include.  There is a preferable way when we want to include a template. And that's by using a custom directive.
+
+* Template expanding directive - custom tags or attributes
+* Expressing complex UI, calling events, registering events, reusing common components.
+
+To create a directive:  
+
+    app.directive('productTitle', function(){
+      return {
+        restrict: 'E' - element,  ie.  <product-title></product-title> custom build tags; if we want to  anuse attribute - do restrict: 'A'
+        templateUrl: 'product-title.html'
+          A configuration object defining how our directive will work
+      };
+      });
+
+* How to add a controller to the directive?
+
+        app.directive ('productPanels', function() {
+          return {
+            restrict: 'E',
+            templateUrl: 'product-panels.html',
+            controller: function() {
+
+            },
+            controllerAs: 'panels' - it uses panels as our Controller Alias
+          };
+        });
+
+
+Now we have too many directives in our code. We will refactor this in our own modules. 1st, we will pull out all of our product directives in products.js file. Wrap it in its own closure:
+
+    (function() {
+      var app = angular.module('store-products', [ ]);
+
+      app.directive(..);
+      app.directive(..);
+      })();
+
+Nothing magical in the name. Next we tell our store module that it depends on the products module.
+
+    (function() {
+      var app = angular.module('store', ['store-products']);
+      })();
+
+Don't forget to include the products.js file as a script in the index.html  file.
+
+
+Best to split Modules around functionality:
+
+* app.js - top-level module attached via ng-app.
+* products.js - all the functionality for products and only products.
+
+
+
+###Services
+Syntax:
+Specifies the name of the service i.e. $http and pass it as an argument. We do it like this so it is a dependency injection.
+
+    app.controller('SomeController', ['$http', function($http) {
+      this.product = ??;
+      var store = this;
+      store.products = [ ] - initialize it to empty array since the page will render before our data returns from the get request.
+
+                                  #if successful http returns a promise
+      $http.get('/products.json').success(function(data) {
+        #cannot use this.product as this will refer to http. That's why we have created a variable called store.
+        store.products = data;
+        });
+    }]);
+
+Can also do:  
+
+* $http.post('/path/to/resource.json', { param: 'value'});
+* $http.delete('/path/to/resource.json');
+* Or any other HTTP method by using a config object: $http.({method: 'Options', url: '/path/to/resource.json' });    $http.({method: 'PATCH', url: '/path/to/resource.json' }); $http.({method: 'TRACE', url: '/path/to/resource.json' });
+
+
+If we need more than one:
+
+    app.controller('SomeController', ['$http', '$log' function($http, $log) {
+
+    } ]);
+
+
+__Zhivko__
