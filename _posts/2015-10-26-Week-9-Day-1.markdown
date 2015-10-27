@@ -1,0 +1,82 @@
+---
+layout: post
+title: "Week 9, Day 1"
+date: 2015-10-26
+---
+I spent the morning playing around with my ToDo list app. It has taken me a while but it is getting to the state I want it to be in:
+
+    toDoList.controller('ToDoListController', [function(){
+      var self = this;
+
+      self.tab = 1;
+
+      self.list = [{'task': 'Go for run', 'completed': false},
+      {'task': 'Go to the gym', 'completed': false}];
+
+      self.addTask = function() {
+        self.list.push({'task': self.taskAction, 'completed': false});
+        self.taskAction = '';
+      };
+
+      self.deleteCompletedTasks = function() {
+        self.list = self.list.filter(function(task) {
+          return !task.completed;
+        });
+      };
+
+
+      self.setTab = function(newTab) {
+        self.tab = newTab;
+      };
+
+      self.tabIsSet = function(tabName) {
+        return self.tab === tabName;
+      };
+
+      self.changeStatus = function(task) {
+        task.completed = !task.completed;
+      };
+
+    }]);
+
+I have added a few more methods to it. The `setTab` & `tabIsSet` methods will allow me to change the view of the different tasks: i.e. being able to display all tasks, active tasks and completed tasks respectively:
+
+
+
+    <section ng-show="controller.tabIsSet(1)">
+      <ul class="list-group" ng-repeat="task in controller.list">
+        <input type="checkbox" ng-click="controller.changeStatus(task)" check>
+        <span><input ng-model="task.task"></span>
+      </ul>
+    </section>
+
+
+    <section ng-show="controller.tabIsSet(2)">
+      <ul class="list-group" ng-repeat="task in controller.list | filter: { completed: false }">
+        <input type="checkbox" ng-click="controller.changeStatus(task)">
+        <span><input ng-model="task.task"></span>
+      </ul>
+    </section>
+
+
+    <section ng-show="controller.tabIsSet(3)">
+      <ul class="list-group" ng-repeat="task in controller.list | filter: { completed: true }">
+        <input type="checkbox" ng-click="controller.changeStatus(task)">
+        <span><input ng-model="task.task"></span>
+      </ul>
+    </section>
+
+    <section class="btn" ng-show="controller.list.length">
+      <button ng-click="controller.setTab(1)" type="button">All</button>
+      <button ng-click="controller.setTab(2)" type="button">Active</button>
+      <button ng-click="controller.setTab(3)" type="button">Completed</button>
+      <button ng-click="controller.deleteCompletedTasks()" type="button">Clear Completed</button>
+    </section>
+
+So depending on which button the user clicks, he will be able to see the appropriate tasks. It has taken me a while to get there and I am really happy about that.
+
+We will be doing a Makerthon for the first 3 days this week, having a Jamboree on Wednesday where ideas for our Final projects will be pitched! I am really excited about the final projects and I am looking forward to it.
+
+I will tell you tomorrow what my team's project is in the Makerthon.
+
+__Zhivko__

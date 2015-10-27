@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Week 9, Day 2"
+date: 2015-10-27
+---
+As promised I will talk about my team project today - We have decided to build an online game called Bulls and Cows. I have always wanted to build one so I am really happy with this!
+
+My team has 6 people on it and we have assigned different parts of the programme to the different pairs. My pair is creating the back-end logic and we have managed to finish it today. We have 2 classes: Player, Game and a module (Rules). Our goal was to make the game in such a way that we can reuse the code to create another multiplayer game.
+
+I hope we will be able to deploy the app tomorrow and I will post a link to it later this week.
+
+Good night.
+
+__Zhivko__

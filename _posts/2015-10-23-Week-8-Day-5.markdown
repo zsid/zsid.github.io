@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Week 8, Day 5"
+date: 2015-10-23
+---
+I have resumed working with Angular today, doing more tutorials. I have been feeling a little bit lost this week as I wasn't sure what I should be focusing on. I will defo pass my feedback to the coaches so that the cohort after us will have overall a better experience than me.
+
+We are also having a karaoki night this evening and it will be fun! I will post a picture tomorrow.
+
+__Zhivko__
+
+As promised (I know I am a really bad photographer):
+
+![karaoke]({{http://zsid.github.io./2015/09/22/Week-8-Day-5.html }}/images/karaoke.jpg)

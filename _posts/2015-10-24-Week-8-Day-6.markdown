@@ -1,0 +1,73 @@
+---
+layout: post
+title: "Week 8, Day 6"
+date: 2015-10-24
+---
+The weekend challenge this week is to build a Todo list as a mini front-end application. I have decided to use Angular. It took me a long time to set up my test environment but in the end I did it:
+
+
+    describe('ToDoListController', function() {
+
+      beforeEach(module('ToDoList'));
+
+      var ctrl;
+
+      beforeEach(inject(function($controller) {
+        ctrl = $controller('ToDoListController');
+      }));
+
+      it('initialises with an empty list', function() {
+        expect(ctrl.list).toEqual([]);
+      });
+
+      describe('When the list is empty', function () {
+
+        var task1 = { 'task': 'Go for a run', 'completed': false};
+        var task2 = { 'task': 'Go to the shop', 'completed': true};
+
+
+        it('can add tasks', function() {
+          ctrl.addTask(task1);
+          expect(ctrl.list).toEqual([task1]);
+        });
+
+        it('can delete completed tasks', function() {
+          ctrl.addTask(task1);
+          ctrl.addTask(task2);
+          ctrl.deleteTask();
+          expect(ctrl.list).toEqual([task1]);
+        })
+
+      });
+
+    });
+
+Beautiful, write tests first, watch them fail and my code to solve them is not that long:
+
+    My module:
+
+    var toDoList = angular.module('ToDoList', ['ngResource']);
+
+
+    My controller:
+    
+    toDoList.controller('ToDoListController', [function(){
+      var self = this;
+
+      self.list = [];
+
+      self.addTask = function(task) {
+        self.list.push(task);
+      };
+
+      self.deleteTask = function() {
+        self.list = self.list.filter(function(task) {
+          return !task.completed;
+        });
+      };
+
+    }]);
+
+Short and sweet! Yes!
+
+__Zhivko__
