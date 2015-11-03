@@ -1,0 +1,102 @@
+---
+layout: post
+title: "Week 10, Day 2"
+date: 2015-11-03
+---
+Good morning or should I say good evening.
+
+I think we made good progress yesterday. We have set up Rails and users can now sign up. After our morning stand up, we have decided to look at different ways of logging in. You can see a summary of our morning standup below:
+
+![day2]({{http://zsid.github.io./2015/09/22/Week-10-Day-2.html }}/images/day2.jpg)
+
+I haven't mentioned it earlier but we have generated a rails-api project which meant that we couldn't render any views if we were to use the `devise` gem for the user management. That's why my pair partner and I have spent the morning looking at different authentication methods, time boxing it until lunch time. One of the methods was to use `devise_token_auth` gem but it was doing so much work behind the scenes that we have decided not to use it as we would have spent too much time figuring out how to implement it.
+
+As a result, we have created two models and controllers - User and Session respectively. One thing we are particularly proud of is how skinny our controllers are:
+
+
+    class UsersController < ApplicationController
+      include UsersHelper
+
+      def create
+        create_user(JSON.parse(request.body.read))
+      end
+
+      def destroy
+        destroy_user(JSON.parse(request.body.read))
+      end
+
+      def user_params
+        params.require(:user).permit(:name, :email, :password, :password_confirmation)
+      end
+
+    end
+
+
+    class SessionsController < ApplicationController
+      include SessionsHelper
+
+      def create
+        log_in(JSON.parse(request.body.read))
+      end
+
+      def destroy
+        log_out(JSON.parse(request.body.read))
+      end
+
+    end
+
+Thank you helpers!
+
+
+    module UsersHelper
+
+      def create_user(hash)
+        user = User.new(email:(hash['email']),name:(hash['name']),password:(hash['password']),password_confirmation:(hash['password_confirmation']))
+        if user.save
+          session = Session.create(user_id:(user.id), auth_key:(SecureRandom.hex))
+          render json: {auth_key: session.auth_key}, status: 201
+        else
+          render json: user.errors, status: :unauthorized
+        end
+      end
+
+      def destroy_user(hash)
+        session = Session.find_by_auth_key(hash['auth_key'])
+        if session
+          user = User.find(session.user_id)
+          user.destroy
+          render json: {messages: 'User deleted'}, status: 200
+        else
+          render json: {messages: 'Unsuccesful delete attempt, please try again'}, status: :unauthorized
+        end
+      end
+
+    end
+
+    module SessionsHelper
+
+      def log_in(hash)
+        user = User.find_by_email(hash['email'])
+        if user.authenticate(hash['password'])
+          session = Session.create(user_id:(user.id), auth_key:(SecureRandom.hex))
+          render json: {auth_key: session.auth_key}, status: 201
+        else
+          render json: {messages: 'Invalid Email or Password'}, status: :unauthorized
+        end
+      end
+
+      def log_out(hash)
+        session = Session.find_by_auth_key(hash['auth_key'])
+        if session
+          session.destroy
+          render json: {messages: 'Signed out'}
+        else
+          render json: {messages: 'Unsuccesful sign-out'}, status: :unauthorized
+        end
+      end
+
+    end
+
+We will come back and refactor the helpers too! But I will still take it as a small refactoring win!
+
+__Zhivko__

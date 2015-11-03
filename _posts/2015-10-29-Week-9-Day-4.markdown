@@ -1,0 +1,20 @@
+---
+layout: post
+title: "Week 9, Day 4"
+date: 2015-10-29
+---
+I spent the morning playing bulls and cows against the rest of the team. At 10:30 we went downstairs to present our Makerthon projects. I was really impressed by everyone's final results. The projects were:
+
+* Modified Twitter clone
+* To Do App for teams - everyone should mark a task done before the task is deleted
+* Music app where you can add your track to the playlist
+* Ruby gem for messaging between logged in users
+* Whistling app which closes your Chrome pages after someone has whistled
+
+AMAZING! I have a feeling I am forgetting someone's project, apologies!
+
+We pitched ideas on Wednesday for our final projects and today is the deadline for the first round. I am looking forward to see what will be shortlisted for tomorrow when everyone will submit their 1st, 2nd and 3rd choices.
+
+I am also seeing James Bond tonight so figures crossed that it will be good!
+
+__Zhivko__

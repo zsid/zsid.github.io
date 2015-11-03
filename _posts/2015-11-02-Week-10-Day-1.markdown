@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Week 10, Day 1"
+date: 2015-11-02
+---
+Mondays - as always I have spent the morning reviewing the Juniors' weekend challenges, giving them tips on how to improve their code.
+
+This Monday is also really special - for the next 2 weeks I will be working on my final project, graduating from Makers on 13 November. OMG, that time already! I cannot believe how quickly the time has passed. If you are in London, do come to Makers to say hi and see what everyone has achieved in two weeks.
+
+My final project is to create an Uber Share app where you can find people around you and if you are going in the same direction, share a cab and split the fare. Exciting!
+
+We have spent the afternoon discussing what technologies to use and how to approach the project. I will be pairing on creating the Rails back-end and once this is done, helping on the front-end. You can see the notes below. Can you guess who I am?
+
+![day1]({{http://zsid.github.io./2015/09/22/Week-10-Day-1.html }}/images/day1.jpg)
+
+__Zhivko__

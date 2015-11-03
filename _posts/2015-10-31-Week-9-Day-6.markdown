@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Week 9, Day 6"
+date: 2015-10-31
+---
+
+I have worked today on my To Do app, adding some feature tests. I will push it to Github once I have complete feature tests.
+
+Today is also Halloween and I have dressed up - I will leave it to you to decide what I am.
+
+__Zhivko__
+
+PS - I will post a picture tomorrow.

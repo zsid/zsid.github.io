@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Week 9, Day 5"
+date: 2015-10-30
+---
+
+I enjoyed watching James Bond last night - if you are a fan I recommend to go and see it.
+
+The final project options are out. They are:
+
+* Social music discovery app
+* Team standup alarm clock app
+* Cooking app
+* Online checkpoint game
+* Social bluetooth music app
+* Tippr app
+* Uber share app
+* Stock sentiment app
+
+I have selected as my first choice Uber, second one Tippr and final one the Alarm clock. I am looking forward to Monday when they final project teams will be announced.
+
+__Zhivko__
