@@ -7,7 +7,7 @@ I have stayed at home today as I waited for an engineer to come and fix our boil
 
 Today I have focused on the Instagram challenge. I have refactored my old code and started doing it from scratch. I think I have made some good progress and the front page is now looking like this:
 
-![cake]({{http://zsid.github.io./2015/09/22/Week-8-Day-4.html }}/images/Photogram.jpg)
+![cake]({{http://zsid.github.io./2015/10/22/Week-8-Day-4.html }}/images/Photogram.jpg)
 
 I will defo spend some more time refactoring my code and making it look better.
 

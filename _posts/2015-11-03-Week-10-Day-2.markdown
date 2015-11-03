@@ -7,7 +7,7 @@ Good morning or should I say good evening.
 
 I think we made good progress yesterday. We have set up Rails and users can now sign up. After our morning stand up, we have decided to look at different ways of logging in. You can see a summary of our morning standup below:
 
-![day2]({{http://zsid.github.io./2015/09/22/Week-10-Day-2.html }}/images/day2.jpg)
+![day2]({{http://zsid.github.io./2015/11/03/Week-10-Day-2.html }}/images/day2.jpg)
 
 I haven't mentioned it earlier but we have generated a rails-api project which meant that we couldn't render any views if we were to use the `devise` gem for the user management. That's why my pair partner and I have spent the morning looking at different authentication methods, time boxing it until lunch time. One of the methods was to use `devise_token_auth` gem but it was doing so much work behind the scenes that we have decided not to use it as we would have spent too much time figuring out how to implement it.
 

@@ -11,6 +11,6 @@ My final project is to create an Uber Share app where you can find people around
 
 We have spent the afternoon discussing what technologies to use and how to approach the project. I will be pairing on creating the Rails back-end and once this is done, helping on the front-end. You can see the notes below. Can you guess who I am?
 
-![day1]({{http://zsid.github.io./2015/09/22/Week-10-Day-1.html }}/images/day1.jpg)
+![day1]({{http://zsid.github.io./2015/11/02/Week-10-Day-1.html }}/images/day1.jpg)
 
 __Zhivko__
