@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Week 10, Day 3"
+date: 2015-11-04
+---
+We have spent most of the day looking at Google Maps and trying to make them work. After hours on it, we decided to use [leaflet](http://leafletjs.com/) which is an open source JS library for mobile friendly interactive maps and their documentation is great. Do check them out!
+
+The plan for tomorrow:
+
+![day2]({{http://zsid.github.io./2015/11/04/Week-10-Day-3.html }}/images/day3.jpg)
+
+__Zhivko__
