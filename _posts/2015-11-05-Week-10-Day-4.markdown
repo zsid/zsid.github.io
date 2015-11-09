@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Week 10, Day 4"
+date: 2015-11-05
+---
+We have made good progress today. My pair partner and I have created a table which would store user's coordinates and will return them as JSON to the front end. Good news - everything is tested as well! Whoop whoop!
+
+![day2]({{http://zsid.github.io./2015/11/04/Week-10-Day-4.html }}/images/day4.jpg)
+
+__Zhivko__

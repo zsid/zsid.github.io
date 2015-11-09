@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Week 10, Day 6"
+date: 2015-11-07
+---
+I have focused today on reading [Ruby on Rails Tutorial: Learn Web Development with Rails](http://railstutorial.org) by [Michael Hartl](http://michaelhartl.com/). I do recommend it to anyone who wants to start using Rails!
+
+__Zhivko__

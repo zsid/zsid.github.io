@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Week 10, Day 5"
+date: 2015-11-06
+---
+Summary of the day is below. After experimenting how to update our coordinates table, we have finally managed to do it by passing any params and updating the necessary fields. As we have a better understanding of what we are doing now, it is time to test it properly!
+
+![day2]({{http://zsid.github.io./2015/11/04/Week-10-Day-5.html }}/images/day5.jpg)
+
+__Zhivko__

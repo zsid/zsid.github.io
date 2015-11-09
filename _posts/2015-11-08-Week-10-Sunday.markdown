@@ -1,0 +1,8 @@
+---
+layout: post
+title: "Week 10, Sunday"
+date: 2015-11-08
+---
+I have spent today on my To do App from week 8, adding feature tests and doing some design. What is left is to update the Readme file and get it on heroku. I will post a link to heroku once it is up and running.
+
+__Zhivko__
